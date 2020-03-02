@@ -2,11 +2,18 @@
 # phpins
 Prevents stupid mistakes, for example: forgot to specify connection for class
 
-### Validators:  
-IDefinedThisVariable - detected where variable is define  
-INotForgottenAddUseThisClass - detected set "use" for all class in file  
-INotUseCyrillicLetterC - detected cyrillic letter "c" in code  
+### Validators:
+IDefinedThisVariable - detected where variable is define
+INotForgottenAddUseThisClass - detected set "use" for all class in file
+INotUseCyrillicLetterC - detected cyrillic letter "c" in code
 
+### Installation
+
+1. Install [composer](https://getcomposer.org/).
+2. Install `phpins` using below command:
+```
+composer global require ta-tikoma/phpins
+```
 
 ### Use:
 ```
@@ -22,5 +29,5 @@ RemoveDownLineIndex.php:
 ```
 
 ### Translations
-[EN](https://github.com/ta-tikoma/phpins/blob/master/README.md)  
+[EN](https://github.com/ta-tikoma/phpins/blob/master/README.md)
 [RU](https://github.com/ta-tikoma/phpins/blob/master/README-RU.md)
