@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+
+if (is_file(__DIR__.'/../../../autoload.php') === true) {
+    include_once __DIR__.'/../../../autoload.php';
+} else {
+    include_once __DIR__.'/../vendor/autoload.php';
+}
+
+// f - параметр для подключения файла
+$options = getopt('f:e:l');
+if (!isset($options['f'])) {
+    throw new \Exception('Аргумент "f" обязателен');
+}
+
+// e - параметр для исключения валидаторов
+$exclude = [];
+if (isset($options['e'])) {
+    $exclude = explode(',', $options['e']);
+}
+
+// l - логирование
+if (isset($options['l'])) {
+    Log::$isEcho = true;
+}
+
+$phpins = new Phpins\PHPImNotStupid();
+$phpins->validate($options['f'], $exclude);

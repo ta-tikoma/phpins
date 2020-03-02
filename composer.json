@@ -1,0 +1,34 @@
+{
+    "name": "ta-tikoma/phpins",
+    "type": "library",
+    "description": "Prevents stupid mistakes in php class",
+    "keywords": ["phpins", "class", "validator"],
+    "homepage": "https://github.com/ta-tikoma/phpins",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ni Shi",
+            "email": "futik0ma011@gmail.com",
+            "homepage": "https://github.com/ta-tikoma/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Phpins\\": "src/"
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload-dev": {
+        "classmap": [
+            "testing/tests/"
+        ]
+    },
+    "bin": [
+        "bin/phpins"
+    ]
+}
